@@ -1,0 +1,11 @@
+body {
+	margin: 0px 0px 1px 0px; /* the extra 1px allows the iOS inner/outer check to work */
+	padding: 0;
+	background: #000;
+}
+
+/*@media screen and (width: 320px) {
+			html {
+				height: calc(100% + 72px);
+			}
+}*/
