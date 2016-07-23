@@ -21,6 +21,8 @@ GameState.Game.prototype = {
 		
 		//this.brick = new Brick(this.game, 100, 100, 'A', this);
 		
+		this.trump = new Trump(this.game, 720, 400, this);
+
 		var x_offset = 100;
 		this.bricks = [];
 		

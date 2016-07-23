@@ -12,7 +12,24 @@ function Trump(game, x, y, parent){
 	
 	//trump SFX
 	
-	
+	this.trump = this.game.add.sprite(x , y, 'trump', 'push1');
+	this.trump.anchor.setTo(0, 1.0);
+	//this.trump.scale.setTo(2.0, 2.0);
+
+
+	var fillArray = function(value, max) {
+        var result = [];
+        for(var i = 0; i < max; i++) {
+            result.push(value);
+        }
+        return result;
+    };
+
+	var frames = fillArray( 'push1', 20 ).concat(fillArray('push2', 10));
+
+	this.pushAnimation = this.trump.animations.add('push', frames, 24, true);
+
+	this.pushAnimation.play();
 };
 
 
@@ -31,7 +48,7 @@ Trump.MAXPUSH = 3;
 
 Trump.prototype = {
 	'update': function() {
-	
+
 	},
 	
 	'pushOut': function() {

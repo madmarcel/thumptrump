@@ -34,7 +34,8 @@ GameState.Preloader.prototype = {
 			this.load.image(this.images[i], folder + this.images[i] + ext);
 		}
 		
-		var atlases = { 'bricks': 'sprites'
+		var atlases = { 'bricks': 'sprites',
+						'trump': 'trump'
 		};
 
 		/* load sprite atlases */
