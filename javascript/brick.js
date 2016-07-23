@@ -20,6 +20,7 @@ function Brick(game, x, y, key, parent){
 	this.scrapes.push(this.game.add.audio('scrape2',1,true));
 
     this.thumpSFX = this.game.add.audio('thump',1,false);
+	this.slideInterval = 0.5;
 };
 
 /* static constants */
@@ -36,7 +37,7 @@ Brick.STATES = {
 Brick.MAXLEVEL = 10;
 
 // 500ms
-Brick.SLIDE_INTERVAL = 0.5;
+//Brick.SLIDE_INTERVAL = 0.5;
 
 Brick.prototype = {
     'update': function() {
@@ -48,7 +49,8 @@ Brick.prototype = {
         if( this.isSliding() ) {
             var delta = this.game.time.elapsedSecondsSince(this.timestamp);
 
-            if( delta >= Brick.SLIDE_INTERVAL) {
+            if( delta >= this.slideInterval) {
+				
                 this.slideOut();
                 this.timestamp = this.game.time.time;
             }
@@ -79,9 +81,28 @@ Brick.prototype = {
             this.startFall();
         }
     },
-
+	
     'slideIn': function() {
-        console.log('yeah');
+        console.log('yeah', this.slidelevel);
+		var stepBack = 3;
+		if(this.slidelevel <= 3){
+			console.log('lessthan3');
+			this.sprite.x += 5 * this.slidelevel;
+			this.sprite.y -= 3 * this.slidelevel;
+			this.slidelevel = 0;
+			this.slideInterval = 0.5;
+			this.timestamp = this.game.time.time;
+			this.makeInactive();
+		}
+		if(this.slidelevel > 5){
+			this.sprite.x += 5 * stepBack;
+			this.sprite.y -= 3 * stepBack;
+			this.slidelevel -= stepBack;
+			this.slideInterval = 0.7;
+			//reset time stamp, wait 0.7
+			this.timestamp = this.game.time.time;
+		}
+		
 
     },
 
@@ -135,5 +156,10 @@ Brick.prototype = {
         this.currentState = Brick.STATES.SLIDING;
 
         this.sprite.frameName = 'slidingbrick';
-    }
+    },
+	'makeInactive': function() {
+		this.currentState = Brick.STATES.INACTIVE;
+		
+		this.sprite.frameName = 'brick';
+	},
 };

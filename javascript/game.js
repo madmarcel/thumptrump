@@ -27,7 +27,8 @@ GameState.Game.prototype = {
 		
 		var self = this;
 		
-		var brickCounter = 1;
+		var brickCounter = 0;
+		var brickCounter = 0;
 
 		var drawRow = function(x, y, offset){
 			if(offset) {
@@ -73,7 +74,7 @@ GameState.Game.prototype = {
 		
 		 var delta = this.game.time.elapsedSecondsSince(this.timestamp);
 
-            if( delta >= 4.0) {
+            if( delta >= 4.5) {
 				  var r = this.game.rnd.integerInRange(0,this.bricks.length - 1);
 				  if(this.bricks[r].isInactive()){ this.bricks[r].makeActive(); }
 				  this.timestamp = this.game.time.time;
@@ -123,6 +124,8 @@ GameState.Game.prototype = {
 		eight.onDown.add(this.keyPress, this);
 		var nine = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_3);
 		nine.onDown.add(this.keyPress, this);
+		var ten = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_0);
+		ten.onDown.add(this.keyPress, this);
 	},
 	keyPress: function(keyEvent) {
 		// console.log(keyEvent.event.key);
