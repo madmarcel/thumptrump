@@ -53,11 +53,20 @@ GameState.Game.prototype = {
 			toggle = !toggle;
 		}
 		
-		
+		console.log( this.bricks );
+
+			this.bricks[6].makeActive();
 		},
 	update: function() {
 		if(this.game.input.activePointer.isDown) {
 			console.log(this.game.input.activePointer.x + this.game.camera.x, this.game.input.activePointer.y);
+		}
+
+		for(var i = 0; i < this.bricks.length; i++ ) {
+			// console.log(this.bricks[i]);
+			if(this.bricks[i]) {
+				this.bricks[i].update();
+			}
 		}
 	},
 	// full screen

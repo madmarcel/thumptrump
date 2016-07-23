@@ -11,7 +11,9 @@ function Brick(game, x, y, key, parent){
     this.slidelevel = 0;
     this.currentState = Brick.STATES.INACTIVE;
     this.timestamp = this.game.time.time;
-	this.sprite = this.game.add.sprite(x, y, 'bricks', 'brick_m');
+
+    this.mortar = this.game.add.sprite(x - 5, y + 3, 'bricks', 'mortar');
+	this.sprite = this.game.add.sprite(x, y, 'bricks', 'brick');
 };
 
 /* static constants */
@@ -28,7 +30,7 @@ Brick.STATES = {
 Brick.MAXLEVEL = 5;
 
 // 500ms
-Brick.SLIDE_INTERVAL = 0.5;
+Brick.SLIDE_INTERVAL = 1.0;
 
 Brick.prototype = {
     'update': function() {
@@ -48,6 +50,9 @@ Brick.prototype = {
     },
 
     'slideOut': function() {
+
+        this.sprite.x -= 5;
+        this.sprite.y += 3;
 
         this.slidelevel++;
 
@@ -97,5 +102,10 @@ Brick.prototype = {
 
     'isSliding': function() {
         return this.currentState === Brick.STATES.SLIDING;
+    },
+    'makeActive': function() {
+        this.currentState = Brick.STATES.SLIDING;
+
+        this.sprite.frameName = 'slidingbrick';
     }
 };
