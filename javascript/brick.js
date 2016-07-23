@@ -14,6 +14,8 @@ function Brick(game, x, y, key, parent){
 
     this.mortar = this.game.add.sprite(x - 5, y + 3, 'bricks', 'mortar');
 	this.sprite = this.game.add.sprite(x, y, 'bricks', 'brick');
+    //this.sprite.visible = false;
+    //this.mortar.visible = false;
 
     this.scrapes = [];
 	this.scrapes.push(this.game.add.audio('scrape1',1,true));
@@ -46,7 +48,7 @@ Brick.prototype = {
             return;
         }
 
-        if( this.isSliding() ) {
+        /*if( this.isSliding() ) {
             var delta = this.game.time.elapsedSecondsSince(this.timestamp);
 
             if( delta >= this.slideInterval) {
@@ -54,7 +56,7 @@ Brick.prototype = {
                 this.slideOut();
                 this.timestamp = this.game.time.time;
             }
-        }        
+        }*/       
     },
 
     'slideSFX': function() {
@@ -79,14 +81,12 @@ Brick.prototype = {
         if( this.slidelevel > Brick.MAXLEVEL ) {
             this.currentState = Brick.STATES.FALLING;
             this.startFall();
-        }
+        }        
     },
 	
     'slideIn': function() {
-        console.log('yeah', this.slidelevel);
 		var stepBack = 3;
 		if(this.slidelevel <= 3){
-			console.log('lessthan3');
 			this.sprite.x += 5 * this.slidelevel;
 			this.sprite.y -= 3 * this.slidelevel;
 			this.slidelevel = 0;
@@ -147,6 +147,9 @@ Brick.prototype = {
 
     'isDone': function() {
         return this.currentState === Brick.STATES.DONE;
+    },
+    'isFalling': function() {
+        return this.currentState === Brick.STATES.FALLING;
     },
 
     'isSliding': function() {

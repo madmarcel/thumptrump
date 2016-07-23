@@ -5,6 +5,13 @@ GameState.Game = function(game){
 	this.fullscreen = false;
 
 	var self = this;
+
+	this.currentState = GameState.Game.STATES.PLAYING;
+};
+
+GameState.Game.STATES = {
+	'PLAYING': 0,
+	'GAMEOVER': 1
 };
 
 GameState.Game.prototype = {
@@ -15,21 +22,20 @@ GameState.Game.prototype = {
 	},
 	create: function() {
 		this.setupKeyboardControls();
-		this.game.stage.backgroundColor = "#7a449c";
-		this.game.add.sprite(0,0, 'bg');
+		// this.game.stage.backgroundColor = "#7a449c";
+		this.game.add.sprite(0, 0, 'bg');
 		this.timestamp = this.game.time.time;
-		
-		//this.brick = new Brick(this.game, 100, 100, 'A', this);
-		
+				
+		// introducing Mr Trump
 		this.trump = new Trump(this.game, 720, 400, this);
+
+		this.mask = this.game.add.sprite( 0, 768 - 69, 'groundmask');
 
 		var x_offset = 100;
 		this.bricks = [];
-		
-		
+				
 		var self = this;
 		
-		var brickCounter = 0;
 		var brickCounter = 0;
 
 		var drawRow = function(x, y, offset){
@@ -38,7 +44,7 @@ GameState.Game.prototype = {
 				self.game.add.sprite( x, y, 'bricks', 'halfbrick_m');
 				
 				for(var i = 0; i < 2; i++){
-					var b = new Brick(self.game, 210 * i + x + 110, y, '' + brickCounter, self);
+					var b = new Brick(self.game, 210 * i + x + 110, y, '' + brickCounter, self);					
 					brickCounter++;
 					self.bricks.push(b);
 				};
@@ -56,38 +62,85 @@ GameState.Game.prototype = {
 		
 		var y_offset = 586;
 		var toggle = false;
+		// draw the wall
 		for(var r = 0; r < 4; r++){
 			drawRow(420, y_offset, toggle);
 			y_offset -= 100;
 			toggle = !toggle;
 		}
-		},
+
+		// game over sign
+		this.sign = this.game.add.sprite(this.game.world.centerX, -200, 'gameover');
+		this.sign.anchor.setTo(0.5, 0.5);
+		this.sign.visible = false;
+
+		// retry text
+		this.text = this.game.add.sprite(this.game.world.centerX, 570, 'text');
+		this.text.anchor.setTo(0.5, 0.5);
+		this.text.visible = false;
+
+		this.gameoversfx = [];
+		this.gameoversfx.push(this.game.add.audio('fired', 1, false));
+		this.gameoversfx.push(this.game.add.audio('finished', 1, false));
+
+	},
 	update: function() {
 		if(this.game.input.activePointer.isDown) {
 			console.log(this.game.input.activePointer.x + this.game.camera.x, this.game.input.activePointer.y);
 		}
 
-		for(var i = 0; i < this.bricks.length; i++ ) {
-			// console.log(this.bricks[i]);
-			if(this.bricks[i]) {
-				this.bricks[i].update();
+		if(!this.isGameOver()) {
+			// not dead, so update the bricks
+			for(var i = 0; i < this.bricks.length; i++ ) {
+				if(this.bricks[i]) {
+					this.bricks[i].update();
+				}
 			}
-		}
-		
-		 var delta = this.game.time.elapsedSecondsSince(this.timestamp);
 
-            if( delta >= 4.5) {
-				  var r = this.game.rnd.integerInRange(0,this.bricks.length - 1);
-				  if(this.bricks[r].isInactive()){ this.bricks[r].makeActive(); }
-				  this.timestamp = this.game.time.time;
+			/*var delta = this.game.time.elapsedSecondsSince(this.timestamp);
+
+				if( delta >= 4.5) {
+					var r = this.game.rnd.integerInRange(0,this.bricks.length - 1);
+					if(this.bricks[r].isInactive()){ this.bricks[r].makeActive(); }
+					this.timestamp = this.game.time.time;
+				}*/
+			
+			var count = 0;
+			for(var i = 0; i < this.bricks.length; i++ ) {
+				if(this.bricks[i].isDone()){
+					count++;
+				}
 			}
-		var count = 0;
-		for(var i = 0; i < this.bricks.length; i++ ) {
-			if(this.bricks[i].isDone()){
-				count++;
+			if(count > 8){ 
+				this.currentState = GameState.Game.STATES.GAMEOVER;
+				this.showGameOverSign();
 			}
+
+			this.trump.update();
 		}
-		if(count > 8){ console.log('game over');}
+	},
+	isGameOver: function() {
+		return this.currentState === GameState.Game.STATES.GAMEOVER;
+	},
+	showGameOverSign: function() {
+		this.sign.visible = true;
+		var tween = this.game.add.tween(this.sign).to( { y: this.game.world.centerY }, 600, Phaser.Easing.Linear.None, true );
+		tween.onComplete.addOnce(this.showText, this);
+
+		// play a 'you're fired' sfx
+		this.firedSFX();
+	},
+	firedSFX: function() {
+        var r = this.game.rnd.integerInRange(0,1);
+		this.gameoversfx[r].play('', 0, 1.0, false);
+    },
+	showText: function() {
+		// show text under game over sign
+		this.text.visible = true;
+	},
+	// reset state, score, etc
+	resetGame: function() {
+		this.currentState = GameState.Game.STATES.PLAYING;
 	},
 	// full screen
 	toggleFullscreen: function() {
@@ -104,9 +157,6 @@ GameState.Game.prototype = {
 
 		var f_key = this.input.keyboard.addKey(Phaser.KeyCode.F);
 		f_key.onDown.add(this.toggleFullscreen, this);
-
-		//var a_key = this.input.keyboard.addKey(Phaser.KeyCode.A);
-		//a_key.onDown.add(this.AbrickSlapped, this);
 
 		var one = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_5);
 		one.onDown.add(this.keyPress, this);
@@ -130,11 +180,17 @@ GameState.Game.prototype = {
 		ten.onDown.add(this.keyPress, this);
 	},
 	keyPress: function(keyEvent) {
-		// console.log(keyEvent.event.key);
 
+		// if gameover and user presses 0
+		if(keyEvent.event.key === '0' && this.isGameOver()) {
+			this.resetGame();
+			// start a new state
+			this.state.start('Game', true, false);
+		}
+
+		// pass keypress to all the bricks
 		for(var i = 0; i < this.bricks.length; i++) {
 			this.bricks[i].thump(keyEvent.event.key);
 		}
-
 	}
 };
