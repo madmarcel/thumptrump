@@ -81,15 +81,23 @@ Brick.prototype = {
     },
 
     'slideIn': function() {
+        console.log('yeah');
 
     },
 
     // player has pressed a key
     'thump': function(keyPressed) {
+
+        if(!this.isSliding() ) {
+            return;
+        }
+
+        // console.log(keyPressed, this.key);
+
         if(keyPressed === this.key) {
 
             // slide back 
-
+            this.slideIn();
         }
     },
 
