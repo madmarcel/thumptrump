@@ -80,8 +80,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="157.63406"
-     inkscape:cy="402.33452"
+     inkscape:cx="690.08546"
+     inkscape:cy="328.52465"
      inkscape:document-units="px"
      inkscape:current-layer="layer5"
      showgrid="false"
@@ -555,23 +555,29 @@
      id="layer5"
      inkscape:label="trump sprite">
     <rect
-       style="opacity:1;fill:#ac9d93;fill-opacity:1;stroke:#917c6f;stroke-width:0.82171023;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ac9d93;fill-opacity:1;stroke:#917c6f;stroke-width:1.41811907;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect5765"
-       width="198.16818"
-       height="295.74893"
-       x="649.03485"
-       y="414.35745"
-       rx="3.4753466"
-       ry="1.8755304" />
+       width="197.8259"
+       height="882.39282"
+       x="649.20605"
+       y="414.83835"
+       rx="3.4693434"
+       ry="5.595809"
+       inkscape:export-filename="/home/mvandest/public_html/thumptrump/images/stand.png"
+       inkscape:export-xdpi="89.889778"
+       inkscape:export-ydpi="89.889778" />
     <rect
-       ry="0.1930045"
-       rx="3.4851279"
-       y="414.07858"
-       x="648.75598"
-       height="30.434523"
-       width="198.72592"
+       ry="0.39874414"
+       rx="3.4820135"
+       y="414.09143"
+       x="648.84479"
+       height="62.877224"
+       width="198.54832"
        id="rect5782"
-       style="opacity:1;fill:#917c6f;fill-opacity:1;stroke:#917c6f;stroke-width:0.2639676;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="opacity:1;fill:#917c6f;fill-opacity:1;stroke:#917c6f;stroke-width:0.37924504;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="/home/mvandest/public_html/thumptrump/images/stand.png"
+       inkscape:export-xdpi="89.889778"
+       inkscape:export-ydpi="89.889778" />
     <g
        id="g5730"
        transform="matrix(1.2640851,0,0,1.2640851,-221.51813,-100.03526)">

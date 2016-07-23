@@ -23,9 +23,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="890.9628"
-     inkscape:cy="1048.5664"
+     inkscape:zoom="2"
+     inkscape:cx="822.00153"
+     inkscape:cy="1053.5893"
      inkscape:document-units="px"
      inkscape:current-layer="frame_trump_2"
      showgrid="false"
@@ -1195,7 +1195,10 @@
         </g>
       </g>
       <g
-         id="g4706">
+         id="g4706"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90">
         <path
            style="display:inline;fill:#ff9955;fill-opacity:1;fill-rule:evenodd;stroke:#ff9955;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 662.12322,-439.62573 c 30.39063,16.5361 1.34082,69.27285 27.70913,87.59663 -17.62286,8.50253 -24.13366,-3.12846 -25.92146,-20.5584 -1.78767,-17.42995 -16.536,-66.59132 -16.536,-66.59132 z"
@@ -1429,18 +1432,27 @@
          d="m 940.36974,-447.4039 c 30.39063,16.5361 1.34082,69.27285 27.70913,87.59663 -17.62286,8.50253 -24.13366,-3.12846 -25.92146,-20.5584 -1.78767,-17.42995 -16.536,-66.59132 -16.536,-66.59132 z"
          id="path4745"
          inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccscc" />
+         sodipodi:nodetypes="ccscc"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="cccsc"
          inkscape:connector-curvature="0"
          id="path4747"
          d="m 937.10348,-411.66138 c -4.10828,-12.00881 8.53257,-11.06074 8.53257,-11.06074 13.58891,1.26408 4.74032,34.76234 4.74032,34.76234 2.21215,19.90934 -7.58451,9.0066 -7.74252,7.90053 -0.15801,-1.10608 -7.74252,-20.54138 -5.53037,-31.60213 z"
-         style="display:inline;fill:#ffc39b;fill-opacity:1;fill-rule:evenodd;stroke:#ffc39b;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#ffc39b;fill-opacity:1;fill-rule:evenodd;stroke:#ffc39b;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <g
          id="g4854"
          inkscape:transform-center-x="23.415986"
          inkscape:transform-center-y="42.999314"
-         transform="matrix(0.97941856,-0.20183975,0.20183975,0.97941856,77.014459,161.46226)">
+         transform="matrix(0.97941856,-0.20183975,0.20183975,0.97941856,77.014459,161.46226)"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90">
         <circle
            r="18.645256"
            cy="-234.28319"
@@ -1459,19 +1471,28 @@
          inkscape:connector-curvature="0"
          id="path4753"
          d="m 829.7342,-123.64908 c -16.08919,0.44693 -31.73145,18.77071 -31.73145,18.77071 -9.83227,25.474529 13.1685,21.932619 14.28562,21.912309 36.87102,-0.67038 48.26494,-17.739219 48.9379,-20.334929 1.56423,-6.03344 -4.0064,-15.65541 -4.0064,-15.65541 0,0 -19.35818,-7.24196 -27.48567,-4.69268 z"
-         style="display:inline;fill:#784421;fill-rule:evenodd;stroke:#784421;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#784421;fill-rule:evenodd;stroke:#784421;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          style="display:inline;fill:#784421;fill-rule:evenodd;stroke:#784421;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 932.92142,-121.41447 c 16.08919,0.44693 31.73145,18.77071 31.73145,18.77071 9.83227,25.474529 -12.53645,19.088429 -13.65357,19.068119 -36.87103,-0.67038 -48.26495,-17.739219 -48.93791,-20.334929 -1.56423,-6.03344 3.37436,-12.81121 3.37436,-12.81121 0,0 19.35818,-7.24197 27.48567,-4.69269 z"
          id="path4755"
          inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccsscc" />
+         sodipodi:nodetypes="ccsscc"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="ccsccscscc"
          inkscape:connector-curvature="0"
          id="path4757"
          d="m 811.63386,-201.41344 c -14.30149,19.88802 11.6905,61.35715 -8.93843,86.92626 6.66175,10.44234 57.87635,7.82113 59.66403,4.46922 1.7877,-3.35191 13.40765,-49.83177 14.07803,-61.0048 2.90499,3.12845 6.48037,0.44692 6.48037,0.44692 -4.91614,12.06688 13.7332,62.74963 15.19533,63.46286 9.16189,4.46922 59.88749,-4.91614 59.88749,-4.91614 -29.49682,-39.3291 -4.24575,-68.15554 -20.55839,-96.08814 -0.67615,-1.15779 -114.18846,2.01115 -114.18846,2.01115 z"
-         style="display:inline;fill:#214478;fill-opacity:1;fill-rule:evenodd;stroke:#214478;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#214478;fill-opacity:1;fill-rule:evenodd;stroke:#214478;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <rect
          ry="8.7076616"
          rx="14.436337"
@@ -1480,24 +1501,36 @@
          height="50.845345"
          width="94.420189"
          id="rect4759"
-         style="display:inline;opacity:1;fill:#ffc39b;fill-opacity:1;stroke:#ffc39b;stroke-width:1.14433825;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="display:inline;opacity:1;fill:#ffc39b;fill-opacity:1;stroke:#ffc39b;stroke-width:1.14433825;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="ccccc"
          inkscape:connector-curvature="0"
          id="path4761"
          d="m 833.08611,-300.18309 c -33.74258,14.74841 -31.50798,110.38963 -31.50798,110.38963 37.76487,21.22878 79.32858,10.05573 79.32858,10.05573 -0.22346,-1.1173 -1.78769,-81.56319 -1.78769,-81.56319 0,0 -39.55256,-41.34024 -46.03291,-38.88217 z"
-         style="display:inline;fill:#3771c8;fill-opacity:1;fill-rule:evenodd;stroke:#3771c8;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#3771c8;fill-opacity:1;fill-rule:evenodd;stroke:#3771c8;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          style="display:inline;fill:#214478;fill-rule:evenodd;stroke:#214478;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 867.872,-268.77655 c 5.18693,11.65315 -1.83539,33.5904 -2.00576,37.98024 10.2739,7.05027 16.4494,46.20968 16.4494,46.20968 l -4.14244,-75.57166 c 0,0 -5.40168,-5.24024 -10.3012,-8.61826 z"
          id="path4763"
          inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccccc" />
+         sodipodi:nodetypes="ccccc"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <g
          id="g4850"
          inkscape:transform-center-x="-31.135333"
          inkscape:transform-center-y="31.433672"
-         transform="matrix(0.95875145,0.28424576,-0.28424576,0.95875145,-44.649043,-275.80188)">
+         transform="matrix(0.95875145,0.28424576,-0.28424576,0.95875145,-44.649043,-275.80188)"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90">
         <circle
            style="display:inline;opacity:1;fill:#ffccaa;fill-opacity:1;stroke:#ffccaa;stroke-width:1.26408505;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            id="circle4765"
@@ -1516,133 +1549,196 @@
          inkscape:connector-curvature="0"
          id="path4769"
          d="m 836.43801,-305.88135 c 0.67038,0.89385 41.56371,41.56371 41.56371,41.56371 -8.93844,-1.45249 -17.09476,14.52495 -17.09476,14.52495 -6.14517,-28.71472 -35.41852,-38.32352 -33.40738,-49.72002 z"
-         style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="ccccc"
          inkscape:connector-curvature="0"
          id="path4771"
          d="m 926.26925,-308.22769 c -1.56423,2.23461 -48.04407,47.59715 -48.04407,47.59715 l 2.68153,80.44588 c 36.42411,10.72612 65.69748,-10.05573 65.69748,-10.05573 0,0 6.92728,-92.51278 -20.33494,-117.9873 z"
-         style="display:inline;fill:#3771c8;fill-opacity:1;fill-rule:evenodd;stroke:#3771c8;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#3771c8;fill-opacity:1;fill-rule:evenodd;stroke:#3771c8;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="ccccc"
          inkscape:connector-curvature="0"
          id="path4773"
          d="m 887.72227,-270.23936 c -4.13403,12.0669 4.80439,33.29566 5.36306,37.65314 -9.60882,7.93286 -12.29035,47.48542 -12.29035,47.48542 l -2.5698,-75.64147 c 0,0 4.91614,-5.69825 9.49709,-9.49709 z"
-         style="display:inline;fill:#214478;fill-rule:evenodd;stroke:#214478;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#214478;fill-rule:evenodd;stroke:#214478;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 922.46307,-306.10481 c -0.67038,0.89384 -41.56371,41.56371 -41.56371,41.56371 8.93843,-1.4525 17.09475,14.52494 17.09475,14.52494 6.14517,-28.71471 35.41853,-38.32352 33.40738,-49.72002 z"
          id="path4775"
          inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccccc" />
+         sodipodi:nodetypes="ccccc"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="cccssssc"
          inkscape:connector-curvature="0"
          id="path4777"
          d="m 938.78382,-446.88496 c -8.93834,32.17836 28.02528,61.15624 13.27682,117.02143 -6.70383,20.11147 -55.90084,86.07074 -134.55904,22.60788 -10.50266,-6.92729 -14.16183,-16.39643 -13.91044,-27.42981 0.25139,-11.03338 -5.38331,-22.99894 -0.24371,-36.18312 5.1396,-13.18419 -4.70224,-27.587 -0.54029,-40.96672 4.16197,-13.37971 22.32772,-25.73633 19.64619,-37.3563 -0.51243,-2.2205 95.32517,-10.65409 116.33047,2.30664 z"
-         style="display:inline;fill:#ffccaa;fill-opacity:1;fill-rule:evenodd;stroke:#ffccaa;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#ffccaa;fill-opacity:1;fill-rule:evenodd;stroke:#ffccaa;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="ccsssssssscc"
          inkscape:connector-curvature="0"
          id="path4779"
          d="m 811.28031,-447.4039 c -30.39066,16.5361 0.44692,80.44588 -25.92145,98.76967 17.62281,8.50252 33.07218,0 34.85987,-17.42994 0.22347,-2.17874 -10.13719,0.27726 -9.63614,-8.41212 0.18412,-3.19318 -5.51739,-11.93302 -4.82606,-15.71439 0.69132,-3.78137 -4.07439,-16.47505 6.3586,-21.785 3.67454,-1.87019 10.06168,0.0571 12.54106,3.24008 2.70617,3.47403 4.76634,23.67536 5.5048,20.17419 0.73848,-3.50119 7.84533,6.57983 7.84533,6.57983 -11.92803,-23.59381 -4.78844,-52.13513 -4.455,-53.66009 0.33344,-1.52494 0.52199,-2.37688 0.52199,-2.37688 z"
-         style="display:inline;fill:#ff9955;fill-opacity:1;fill-rule:evenodd;stroke:#ff9955;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#ff9955;fill-opacity:1;fill-rule:evenodd;stroke:#ff9955;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4781"
          d="m 842.22634,-310.19898 c 25.92144,25.92144 68.379,14.74841 74.18887,-0.44692"
-         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <ellipse
          style="display:inline;opacity:1;fill:#ffd5d5;fill-opacity:1;stroke:#ffd5d5;stroke-width:1.06085777;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="ellipse4783"
          cx="914.55737"
          cy="-396.71378"
          rx="10.094571"
-         ry="8.4695711" />
+         ry="8.4695711"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <ellipse
          ry="8.4695711"
          rx="10.094571"
          cy="-394.77444"
          cx="873.7038"
          id="ellipse4785"
-         style="display:inline;opacity:1;fill:#ffd5d5;fill-opacity:1;stroke:#ffd5d5;stroke-width:1.06085777;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="display:inline;opacity:1;fill:#ffd5d5;fill-opacity:1;stroke:#ffd5d5;stroke-width:1.06085777;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="cscccc"
          inkscape:connector-curvature="0"
          id="path4787"
          d="m 896.17872,-419.08788 c 0,0 1.47961,36.36042 2.68618,36.73747 6.32043,1.97514 6.32043,13.66792 6.32043,13.66792 -0.94807,5.68839 -6.47844,3.00221 -6.47844,3.00221 -5.60938,6.87346 -10.74472,0.63204 -10.74472,0.63204 -13.90494,1.89613 -3.79226,-15.80106 -1.89613,-15.48504"
-         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="cccc"
          inkscape:connector-curvature="0"
          id="path4789"
          d="m 854.9669,-325.61779 c 9.83226,-28.82643 70.7253,-24.24549 70.7253,-24.24549 0,0 -11.49942,0.30273 -15.07589,9.56184 -15.03437,-12.98726 -55.64941,14.68365 -55.64941,14.68365 z"
-         style="display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <ellipse
          ry="3.5753725"
          rx="3.5195072"
          cy="-397.23697"
          cx="878.82141"
          id="ellipse4791"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <ellipse
          style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="ellipse4793"
          cx="906.08344"
          cy="-398.0191"
          rx="3.5195072"
-         ry="3.5753725" />
+         ry="3.5753725"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="cccc"
          inkscape:connector-curvature="0"
          id="path4795"
          d="m 860.88861,-403.34385 c 1.67595,-0.78212 18.99416,-1.22903 24.02203,3.01672 -3.24018,-9.16188 -22.01088,-16.98302 -22.01088,-16.98302 -5.58652,0.67039 -2.01115,13.9663 -2.01115,13.9663 z"
-         style="display:inline;fill:#ff7f2a;fill-opacity:1;fill-rule:evenodd;stroke:#ff7f2a;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#ff7f2a;fill-opacity:1;fill-rule:evenodd;stroke:#ff7f2a;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="cccc"
          inkscape:connector-curvature="0"
          id="path4797"
          d="m 899.99423,-401.5929 c 2.56989,-0.33518 17.24996,-11.02611 23.68681,-9.38535 -0.11124,-0.44692 -2.01116,-11.06131 -8.04464,-10.83785 -0.22336,-0.7821 -16.42425,12.96073 -15.64217,20.2232 z"
-         style="display:inline;fill:#ff7f2a;fill-opacity:1;fill-rule:evenodd;stroke:#ff7f2a;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#ff7f2a;fill-opacity:1;fill-rule:evenodd;stroke:#ff7f2a;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
          id="path4799"
          d="m 868.82147,-394.44371 c 3.01672,0 6.70382,3.24018 15.86571,-0.67038 -1.89942,12.62553 -15.64225,11.61997 -15.64225,11.61997"
-         style="display:inline;fill:#ffd5d5;fill-rule:evenodd;stroke:#000000;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#ffd5d5;fill-rule:evenodd;stroke:#000000;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          style="display:inline;fill:#ffd5d5;fill-rule:evenodd;stroke:#000000;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 918.71205,-399.57517 c -2.85115,0.98575 -5.27718,5.25285 -15.2139,4.55066 5.92072,11.31184 18.58054,5.8709 18.58054,5.8709"
          id="path4801"
          inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccc" />
+         sodipodi:nodetypes="ccc"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="ccsc"
          inkscape:connector-curvature="0"
          id="path4803"
          d="m 813.49849,-435.12248 c 24.4627,14.27708 62.67084,-14.82446 195.90391,-11.86934 -96.53356,-12.93035 -79.70596,-70.67007 -160.3218,-46.13132 -8.89808,2.7085 -70.05228,29.00032 -35.58211,58.00066 z"
-         style="display:inline;fill:#ff7f2a;fill-opacity:1;fill-rule:evenodd;stroke:#ff7f2a;stroke-width:1.40869069px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:#ff7f2a;fill-opacity:1;fill-rule:evenodd;stroke:#ff7f2a;stroke-width:1.40869069px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4805"
          d="m 892.54448,-358.96483 c 3.74434,14.54642 5.10905,0.81638 4.89833,-0.79005"
-         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.26408505px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <ellipse
          ry="3.3182235"
          rx="3.476234"
          cy="-209.31502"
          cx="890.42426"
          id="ellipse4807"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.26408505;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.26408505;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <ellipse
          ry="3.7922554"
          rx="3.9502659"
          cy="-192.15596"
          cx="889.4267"
          id="ellipse4809"
-         style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.26408505;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.26408505;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <rect
          transform="matrix(0.99074888,-0.135708,0.13848807,0.9903641,0,0)"
          ry="4.3421965"
@@ -1652,7 +1748,10 @@
          height="21.710981"
          width="19.62554"
          id="rect4811"
-         style="display:inline;opacity:1;fill:#214478;fill-opacity:1;stroke:#214478;stroke-width:0.87276834;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="display:inline;opacity:1;fill:#214478;fill-opacity:1;stroke:#214478;stroke-width:0.87276834;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
       <rect
          style="display:inline;opacity:1;fill:#214478;fill-opacity:1;stroke:#214478;stroke-width:0.78550464;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect4813"
@@ -1662,7 +1761,10 @@
          y="-152.29613"
          rx="4.3891783"
          ry="3.5144258"
-         transform="matrix(0.99402335,-0.10916771,0.17181264,0.98512964,0,0)" />
+         transform="matrix(0.99402335,-0.10916771,0.17181264,0.98512964,0,0)"
+         inkscape:export-filename="/home/mvandest/public_html/thumptrump/resources/trump/talk1.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
     </g>
   </g>
 </svg>
