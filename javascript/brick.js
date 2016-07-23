@@ -11,6 +11,7 @@ function Brick(game, x, y, key, parent){
     this.slidelevel = 0;
     this.currentState = Brick.STATES.INACTIVE;
     this.timestamp = this.game.time.time;
+	this.sprite = this.game.add.sprite(x, y, 'bricks', 'brick_m');
 };
 
 /* static constants */

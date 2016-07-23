@@ -12,12 +12,49 @@ GameState.Game.prototype = {
 	},
 	preload: function() {
 	},
-  	create: function() {
+	create: function() {
 		this.setupKeyboardControls();
 		this.game.stage.backgroundColor = "#7a449c";
-
-		this.brick = new Brick(this.game, 100, 100, 'A', this);
-	},
+		this.game.add.sprite(0,0, 'bg');
+		
+		//this.brick = new Brick(this.game, 100, 100, 'A', this);
+		
+		var x_offset = 100;
+		this.bricks = [];
+		
+		
+		var self = this;
+		
+		var drawRow = function(x, y, offset){
+			if(offset) {
+				
+				self.game.add.sprite( x, y, 'bricks', 'halfbrick_m');
+				
+				for(var i = 0; i < 2; i++){
+					var b = new Brick(self.game, 210 * i + x + 110, y, 'A', self);
+					self.bricks.push(b);
+				};
+				
+				self.game.add.sprite( 210 * 2 + x + 110, y, 'bricks', 'halfbrick_m');
+				
+			} else {
+				for(var i = 0; i < 3; i++){
+					var b = new Brick(self.game, 215 * i + x, y, 'A', self);
+					self.bricks.push(b);
+				};
+			}
+		};
+		
+		var y_offset = 586;
+		var toggle = false;
+		for(var r = 0; r < 4; r++){
+			drawRow(420, y_offset, toggle);
+			y_offset -= 100;
+			toggle = !toggle;
+		}
+		
+		
+		},
 	update: function() {
 		if(this.game.input.activePointer.isDown) {
 			console.log(this.game.input.activePointer.x + this.game.camera.x, this.game.input.activePointer.y);

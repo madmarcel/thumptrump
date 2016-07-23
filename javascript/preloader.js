@@ -17,7 +17,7 @@ GameState.Preloader.prototype = {
 		// this statement sets the blue bar to represent the actual percentage of data loaded
 		this.load.setPreloadSprite(this.preloadBar);
 		// load the images
-		this.images = [ 'brick' ];
+		this.images = [ 'bg' ];
 
 		var debug = true;
 		var sounddebug = false;
@@ -34,7 +34,7 @@ GameState.Preloader.prototype = {
 			this.load.image(this.images[i], folder + this.images[i] + ext);
 		}
 		
-		var atlases = {
+		var atlases = { 'bricks': 'sprites'
 		};
 
 		/* load sprite atlases */
