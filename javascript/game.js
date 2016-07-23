@@ -38,13 +38,26 @@ GameState.Game.prototype = {
 		
 		var brickCounter = 0;
 
+		var keymapping = {
+			0: 'w',
+			1: 'a',
+			2: 's',
+			3: 'd',
+			4: 'f',
+			5: 'g',
+			6: 'ArrowDown',
+			7: 'ArrowUp',
+			8: 'ArrowLeft',
+			9: 'ArrowRight'
+		};
+
 		var drawRow = function(x, y, offset){
 			if(offset) {
 				
 				self.game.add.sprite( x, y, 'bricks', 'halfbrick_m');
 				
 				for(var i = 0; i < 2; i++){
-					var b = new Brick(self.game, 210 * i + x + 110, y, '' + brickCounter, self);					
+					var b = new Brick(self.game, 210 * i + x + 110, y, '' + brickCounter, keymapping[brickCounter], self);					
 					brickCounter++;
 					self.bricks.push(b);
 				};
@@ -53,7 +66,7 @@ GameState.Game.prototype = {
 				
 			} else {
 				for(var i = 0; i < 3; i++){
-					var b = new Brick(self.game, 215 * i + x, y, '' + brickCounter, self);
+					var b = new Brick(self.game, 215 * i + x, y, '' + brickCounter, keymapping[brickCounter], self);
 					brickCounter++;
 					self.bricks.push(b);
 				};
@@ -155,7 +168,7 @@ GameState.Game.prototype = {
 	// controls
 	setupKeyboardControls: function() {
 
-		var f_key = this.input.keyboard.addKey(Phaser.KeyCode.F);
+		var f_key = this.input.keyboard.addKey(Phaser.KeyCode.P);
 		f_key.onDown.add(this.toggleFullscreen, this);
 
 		var one = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_5);
@@ -178,8 +191,43 @@ GameState.Game.prototype = {
 		nine.onDown.add(this.keyPress, this);
 		var ten = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_0);
 		ten.onDown.add(this.keyPress, this);
+
+		var sp = this.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR); // ' '
+		sp.onDown.add(this.keyPress, this);
+
+		var up = this.input.keyboard.addKey(Phaser.KeyCode.UP); // ArrowUp
+		up.onDown.add(this.keyPress, this);
+
+		var down = this.input.keyboard.addKey(Phaser.KeyCode.DOWN); // ArrowDown
+		down.onDown.add(this.keyPress, this);
+
+		var left = this.input.keyboard.addKey(Phaser.KeyCode.LEFT); // ArrowLeft
+		left.onDown.add(this.keyPress, this);
+
+		var right = this.input.keyboard.addKey(Phaser.KeyCode.RIGHT); // ArrowRight
+		right.onDown.add(this.keyPress, this);
+		
+		var a = this.input.keyboard.addKey(Phaser.KeyCode.A);
+		a.onDown.add(this.keyPress, this);
+
+		var s = this.input.keyboard.addKey(Phaser.KeyCode.S);
+		s.onDown.add(this.keyPress, this);
+
+		var w = this.input.keyboard.addKey(Phaser.KeyCode.W);
+		w.onDown.add(this.keyPress, this);
+
+		var d = this.input.keyboard.addKey(Phaser.KeyCode.D);
+		d.onDown.add(this.keyPress, this);
+
+		var f = this.input.keyboard.addKey(Phaser.KeyCode.F);
+		f.onDown.add(this.keyPress, this);
+
+		var g = this.input.keyboard.addKey(Phaser.KeyCode.G);
+		g.onDown.add(this.keyPress, this);
 	},
 	keyPress: function(keyEvent) {
+
+		console.log(keyEvent.event.key);
 
 		// if gameover and user presses 0
 		if(keyEvent.event.key === '0' && this.isGameOver()) {

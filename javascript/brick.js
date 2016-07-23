@@ -1,11 +1,12 @@
 'use strict';
 
-function Brick(game, x, y, key, parent){
+function Brick(game, x, y, key, key2, parent){
 
     this.game = game;	
     this.x = x;
     this.y = y;
     this.key = key;
+    this.altkey = key2;
     this.parent = parent;
 
     this.slidelevel = 0;
@@ -113,9 +114,11 @@ Brick.prototype = {
             return;
         }
 
-        // console.log(keyPressed, this.key);
+        console.log(' ** ', keyPressed, this.key, this.altkey);
 
-        if(keyPressed === this.key) {
+        if(keyPressed === this.key || this.altkey === keyPressed ) {
+
+            console.log('Match');
 
             // slide back 
             this.slideIn();
