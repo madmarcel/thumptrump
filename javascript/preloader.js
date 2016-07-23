@@ -20,7 +20,7 @@ GameState.Preloader.prototype = {
 		this.images = [ 'bg' ];
 
 		var debug = true;
-		var sounddebug = false;
+		var sounddebug = true;
 
 		var folder = 'images/smaller/';
 		var ext = '-fs8.png';
@@ -46,7 +46,12 @@ GameState.Preloader.prototype = {
 		}
 
 		// in game sounds and music
-		this.sfx = {};
+		this.sfx = {
+			'scrape1': 'scrape1',
+			'scrape2': 'scrape2',
+			'thump': 'thump'
+
+		};
 		
 		var have_mp3 = this.game.device.mp3;
 		var have_ogg = this.game.device.ogg;

@@ -14,6 +14,12 @@ function Brick(game, x, y, key, parent){
 
     this.mortar = this.game.add.sprite(x - 5, y + 3, 'bricks', 'mortar');
 	this.sprite = this.game.add.sprite(x, y, 'bricks', 'brick');
+
+    this.scrapes = [];
+	this.scrapes.push(this.game.add.audio('scrape1',1,true));
+	this.scrapes.push(this.game.add.audio('scrape2',1,true));
+
+    this.thumpSFX = this.game.add.audio('thump',1,false);
 };
 
 /* static constants */
@@ -49,12 +55,22 @@ Brick.prototype = {
         }        
     },
 
+    'slideSFX': function() {
+        var r = this.game.rnd.integerInRange(0,1);
+
+		this.scrapes[r].play('', 0, 1.0, false);
+    },
+
     'slideOut': function() {
 
         this.sprite.x -= 5;
         this.sprite.y += 3;
 
         this.slidelevel++;
+
+        if( this.slidelevel  === 1 || this.slidelevel === 5 ) {
+            this.slideSFX();
+        }
 
         // update sprite
 
@@ -79,13 +95,17 @@ Brick.prototype = {
 
     // start the falling tween toward bottom of screen
     'startFall': function() {
-
+        this.mortar.visible = false;
+        var tween = this.game.add.tween(this.sprite).to( { y: 800 }, 1000, Phaser.Easing.Linear.None, true );
+        tween.onComplete.addOnce(this.fallDone, this);
     },
 
     // called when falling tween is done
     'fallDone': function() {
         // dead brick
         this.currentState = Brick.STATES.DONE;
+        this.sprite.visible = false;
+        this.thumpSFX.play('', 0, 1.0, false);
     },
 
     'isInactive': function() {

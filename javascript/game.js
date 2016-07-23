@@ -9,6 +9,7 @@ GameState.Game = function(game){
 
 GameState.Game.prototype = {
 	init: function() {
+		this.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
 	},
 	preload: function() {
 	},
@@ -52,9 +53,6 @@ GameState.Game.prototype = {
 			y_offset -= 100;
 			toggle = !toggle;
 		}
-		
-		console.log( this.bricks );
-
 			this.bricks[6].makeActive();
 		},
 	update: function() {
