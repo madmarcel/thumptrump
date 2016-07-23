@@ -27,10 +27,10 @@ Brick.STATES = {
 };
 
 // how many levels of slide
-Brick.MAXLEVEL = 5;
+Brick.MAXLEVEL = 10;
 
 // 500ms
-Brick.SLIDE_INTERVAL = 1.0;
+Brick.SLIDE_INTERVAL = 0.5;
 
 Brick.prototype = {
     'update': function() {
