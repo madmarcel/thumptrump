@@ -16,7 +16,7 @@ GameState.Game.prototype = {
 		this.setupKeyboardControls();
 		this.game.stage.backgroundColor = "#7a449c";
 
-		this.brick = this.game.add.sprite( 100, 100, 'brick' );
+		this.brick = new Brick(this.game, 100, 100, 'A', this);
 	},
 	update: function() {
 		if(this.game.input.activePointer.isDown) {
