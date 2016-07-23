@@ -17,6 +17,7 @@ GameState.Game.prototype = {
 		this.setupKeyboardControls();
 		this.game.stage.backgroundColor = "#7a449c";
 		this.game.add.sprite(0,0, 'bg');
+		this.timestamp = this.game.time.time;
 		
 		//this.brick = new Brick(this.game, 100, 100, 'A', this);
 		
@@ -53,7 +54,7 @@ GameState.Game.prototype = {
 			y_offset -= 100;
 			toggle = !toggle;
 		}
-			this.bricks[6].makeActive();
+			
 		},
 	update: function() {
 		if(this.game.input.activePointer.isDown) {
@@ -66,6 +67,22 @@ GameState.Game.prototype = {
 				this.bricks[i].update();
 			}
 		}
+		
+		
+		 var delta = this.game.time.elapsedSecondsSince(this.timestamp);
+
+            if( delta >= 4.0) {
+				  var r = this.game.rnd.integerInRange(0,this.bricks.length - 1);
+				  if(this.bricks[r].isInactive()){ this.bricks[r].makeActive(); }
+				  this.timestamp = this.game.time.time;
+			}
+		var count = 0;
+		for(var i = 0; i < this.bricks.length; i++ ) {
+			if(this.bricks[i].isDone()){
+				count++;
+			}
+		}
+		if(count > 8){ console.log('game over');}
 	},
 	// full screen
 	toggleFullscreen: function() {
