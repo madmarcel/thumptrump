@@ -49,7 +49,8 @@ Trump.STATES = {
 	'IDLE': 3,
 	'GAMEOVER': 4,
 	'MOVETOBRICK': 5,
-	'MOVETOINSULT': 6
+	'MOVETOINSULT': 6,
+	'MOVETOBOMB': 7	
 };
 
 Trump.prototype = {
@@ -70,6 +71,7 @@ Trump.prototype = {
 			break;
 			case Trump.STATES.MOVETOBRICK:
 			case Trump.STATES.MOVETOINSULT:
+			case Trump.STATES.MOVETOBOMB:
 				this.moveToDestination();
 			break;
 			case Trump.STATES.PUSHING:
@@ -81,6 +83,7 @@ Trump.prototype = {
 			case Trump.STATES.GAMEOVER:
 				
 			break;
+
 		}
 	},
 	// only called when an action has been completed
@@ -110,17 +113,24 @@ Trump.prototype = {
 				this.timestamp = this.game.time.time;
 				this.doInsult();
 			break;
+			case Trump.STATES.MOVETOBOMB:				
+				this.doBomb();
+			break;
 			case Trump.STATES.PUSHING:
 
 				var r = this.game.rnd.integerInRange(0, 5);
 
-				if( r > 0) {
+				/*if( r > 1) {
 					// either pick the next brick
 					this.pickNextBrick();
-				} else {
+				} else if (r === 0 ){
 					// or insult the player
 					this.pickInsultDest();
-				}
+				} else if (r === 1 ){
+					// or drop a bomb */
+					this.pickBombDest();
+				// }
+
 			break;
 			case Trump.STATES.CHEER:
 				// todo
@@ -137,16 +147,53 @@ Trump.prototype = {
 		this.destination = { 'x': rx, 'y': 400 };
 		this.currentState = Trump.STATES.MOVETOINSULT;		
 	},
+	'pickBombDest': function() {
+
+		var rx = this.game.rnd.integerInRange(600, 1000);
+
+		this.destination = { 'x': rx, 'y': 400 };
+		this.currentState = Trump.STATES.MOVETOBOMB;		
+	},
+	'doBomb': function() {
+		if( this.parent.bomb.isInactive()) {
+			this.parent.bomb.doThrow( this.trump.x, this.trump.y - 200);
+		}
+
+		this.currentState = Trump.STATES.IDLE;
+	},
+	// brick helper functions
+	/* --------------------------- */
+	'findAllGoodBricks': function() {
+		var result = [];
+
+		var b = this.parent.bricks;
+
+		for(var i = 0; i < b.length; i++) {
+			if(b[i].isInactive() || b[i].isSliding() ) {
+				result.push(i);
+			}
+		}
+
+		return result;
+	},
+	'howManyGoodBricksLeft': function() {
+		return this.findAllGoodBricks().length;
+	},
 	'pickNextBrick': function() {
-		var r = this.game.rnd.integerInRange(0, this.parent.bricks.length - 1);
-		if(this.parent.bricks[r].isInactive() || this.parent.bricks[r].isSliding()){ 
+
+		var brickIndexes = this.findAllGoodBricks();
+		var r = this.game.rnd.integerInRange(0, brickIndexes.length - 1);
+
+		var index = brickIndexes[r];
+
+		//if(this.parent.bricks[r].isInactive() || this.parent.bricks[r].isSliding()){ 
 			// take this out
 			//this.parent.bricks[r].makeActive(); 
 
-			this.currentBrickIndex = r;
-			this.destination = { 'x': this.parent.bricks[r].x + 160, 'y': this.parent.bricks[r].y + 180 };
+			this.currentBrickIndex = index;
+			this.destination = { 'x': this.parent.bricks[index].x + 160, 'y': this.parent.bricks[index].y + 180 };
 			this.currentState = Trump.STATES.MOVETOBRICK;
-		}
+		//}
 	},
 	'moveToDestination': function() {	
 		this.oldState = this.currentState;
@@ -175,7 +222,7 @@ Trump.prototype = {
 			this.timestamp = this.game.time.time;
 		}
 
-		if( brick.isDone() || brick.isFalling() ) {
+		if( brick.isDone() || brick.isFalling() || brick.isInactive() ) {
 			// we're done with this brick, on to the next one
 			this.chooseNextAction();
 		}

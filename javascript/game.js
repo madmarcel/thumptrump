@@ -82,6 +82,8 @@ GameState.Game.prototype = {
 			toggle = !toggle;
 		}
 
+		this.bomb = new Bomb(this.game, 720, 660, this);
+
 		// game over sign
 		this.sign = this.game.add.sprite(this.game.world.centerX, -200, 'gameover');
 		this.sign.anchor.setTo(0.5, 0.5);
@@ -95,6 +97,8 @@ GameState.Game.prototype = {
 		this.gameoversfx = [];
 		this.gameoversfx.push(this.game.add.audio('fired', 1, false));
 		this.gameoversfx.push(this.game.add.audio('finished', 1, false));
+
+
 
 	},
 	update: function() {
@@ -125,12 +129,16 @@ GameState.Game.prototype = {
 				}
 			}
 			if(count > 8){ 
-				this.currentState = GameState.Game.STATES.GAMEOVER;
-				this.showGameOverSign();
+				this.doGameOver();
 			}
 
 			this.trump.update();
+			this.bomb.update();
 		}
+	},
+	doGameOver: function() {
+		this.currentState = GameState.Game.STATES.GAMEOVER;
+		this.showGameOverSign();
 	},
 	isGameOver: function() {
 		return this.currentState === GameState.Game.STATES.GAMEOVER;
@@ -227,7 +235,7 @@ GameState.Game.prototype = {
 	},
 	keyPress: function(keyEvent) {
 
-		console.log(keyEvent.event.key);
+		// console.log(keyEvent.event.key);
 
 		// if gameover and user presses 0
 		if(keyEvent.event.key === '0' && this.isGameOver()) {
@@ -236,9 +244,16 @@ GameState.Game.prototype = {
 			this.state.start('Game', true, false);
 		}
 
+		if(keyEvent.event.key === ' ') {
+			this.bomb.thump();
+			return;
+		}
+
 		// pass keypress to all the bricks
 		for(var i = 0; i < this.bricks.length; i++) {
 			this.bricks[i].thump(keyEvent.event.key);
 		}
+
+
 	}
 };

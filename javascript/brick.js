@@ -24,6 +24,12 @@ function Brick(game, x, y, key, key2, parent){
 
     this.thumpSFX = this.game.add.audio('thump',1,false);
 	this.slideInterval = 0.5;
+
+    this.cross = this.game.add.sprite(x + 55, y + 40, 'cross');
+    this.cross.visible = false;
+
+    this.bubble = this.game.add.sprite(x + 60, y + 45, 'bubble');
+    this.bubble.visible = false;
 };
 
 /* static constants */
@@ -106,19 +112,42 @@ Brick.prototype = {
 		
 
     },
-
+    'showCross': function() {        
+        this.cross.alpha = 0.1;
+        this.cross.visible = true;
+        var tween = this.game.add.tween(this.cross).to( { alpha: 1.0 }, 200, Phaser.Easing.Linear.None, true );
+        tween.onComplete.addOnce(this.hideCross, this);
+    },
+    'hideCross': function() {
+        this.cross.visible = false;
+    },
+    'showBubble': function() {
+        this.bubble.alpha = 0.1;
+        this.bubble.visible = true;
+        var tween = this.game.add.tween(this.bubble).to( { alpha: 1.0 }, 200, Phaser.Easing.Linear.None, true );
+        tween.onComplete.addOnce(this.hideBubble, this);
+    },
+    'hideBubble': function() {
+        this.bubble.visible = false;
+    },
     // player has pressed a key
     'thump': function(keyPressed) {
 
         if(!this.isSliding() ) {
+
+            if(keyPressed === this.key || this.altkey === keyPressed ) {
+                this.showCross();
+            }
             return;
         }
 
-        console.log(' ** ', keyPressed, this.key, this.altkey);
+        //console.log(' ** ', keyPressed, this.key, this.altkey);
 
         if(keyPressed === this.key || this.altkey === keyPressed ) {
 
-            console.log('Match');
+            //console.log('Match');
+
+            this.showBubble();
 
             // slide back 
             this.slideIn();

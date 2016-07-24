@@ -24,6 +24,30 @@
      id="defs4511">
     <linearGradient
        inkscape:collect="always"
+       id="linearGradient4406">
+      <stop
+         style="stop-color:#ffff00;stop-opacity:1"
+         offset="0"
+         id="stop4408" />
+      <stop
+         style="stop-color:#800000;stop-opacity:1"
+         offset="1"
+         id="stop4410" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4367">
+      <stop
+         style="stop-color:#000000;stop-opacity:1"
+         offset="0"
+         id="stop4369" />
+      <stop
+         style="stop-color:#666666;stop-opacity:1"
+         offset="1"
+         id="stop4371" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
        id="linearGradient5368">
       <stop
          style="stop-color:#f8f8f8;stop-opacity:1"
@@ -71,6 +95,38 @@
          stdDeviation="2.0379336"
          id="feGaussianBlur5461" />
     </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4367"
+       id="radialGradient4373"
+       cx="980.58032"
+       cy="319.16397"
+       fx="980.58032"
+       fy="319.16397"
+       r="69.089355"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.91600289,-1.5070553,0.8545346,-0.51939447,1606.0581,1962.7247)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4367"
+       id="radialGradient4401"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.91600289,-1.5070553,0.8545346,-0.51939447,1606.0581,1962.7247)"
+       cx="980.58032"
+       cy="319.16397"
+       fx="980.58032"
+       fy="319.16397"
+       r="69.089355" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4406"
+       id="radialGradient4412"
+       cx="773"
+       cy="541"
+       fx="773"
+       fy="541"
+       r="427.68072"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -79,11 +135,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="690.08546"
-     inkscape:cy="328.52465"
+     inkscape:zoom="2"
+     inkscape:cx="745.28127"
+     inkscape:cy="228.42422"
      inkscape:document-units="px"
-     inkscape:current-layer="layer5"
+     inkscape:current-layer="layer7"
      showgrid="false"
      units="px"
      width="1366px"
@@ -553,7 +609,9 @@
   <g
      inkscape:groupmode="layer"
      id="layer5"
-     inkscape:label="trump sprite">
+     inkscape:label="trump sprite"
+     sodipodi:insensitive="true"
+     style="display:inline">
     <rect
        style="opacity:1;fill:#ac9d93;fill-opacity:1;stroke:#917c6f;stroke-width:1.41811907;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect5765"
@@ -1051,12 +1109,88 @@
          y="536.3407"
          x="-466.00742"
          sodipodi:role="line">Hit numpad_0  to try again</tspan></text>
+    <g
+       id="g4382"
+       transform="matrix(0.78288985,0,0,0.78288985,872.89749,267.69326)"
+       inkscape:export-filename="/home/mvandest/public_html/thumptrump/images/bomb.png"
+       inkscape:export-xdpi="89.851318"
+       inkscape:export-ydpi="89.851318">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path4380"
+         d="m 988.5,220.25 c 0,0 -14,-23.5 -9.25,-35.75 8.25,-15.5 25,4.75 38,-7.25 7.5,-10 -9,-32.5 -9,-32.5"
+         style="fill:none;fill-rule:evenodd;stroke:#803300;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         transform="translate(38.75,26)"
+         id="g4375">
+        <rect
+           style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:#4d4d4d;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4363"
+           width="32.526913"
+           height="21.920309"
+           x="934.08801"
+           y="187.46535"
+           rx="4"
+           ry="4" />
+        <circle
+           style="opacity:1;fill:url(#radialGradient4373);fill-opacity:1;stroke:#666666;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path4361"
+           cx="951.05859"
+           cy="267.36841"
+           r="68.589355" />
+        <path
+           style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.94425499px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 900.70902,238.90718 c 13.44677,-23.07488 27.52387,-24.40102 27.52387,-24.40102 0,0 0.74573,-2.372 0.53562,5.85009 -9.69318,2.89492 -23.22705,24.91642 -23.22705,24.91642 z"
+           id="path4365"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc" />
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="89.851318"
+       inkscape:export-xdpi="89.851318"
+       inkscape:export-filename="/home/mvandest/public_html/thumptrump/images/bomb.png"
+       transform="matrix(0.78288985,0,0,0.78288985,1034.8975,284.69326)"
+       id="g4389">
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#803300;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 988.5,220.25 c 0,0 -14,-23.5 -9.25,-35.75 8.25,-15.5 25,4.75 38,-7.25 7.5,-10 -9,-32.5 -9,-32.5"
+         id="path4391"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <g
+         id="g4393"
+         transform="translate(38.75,26)">
+        <rect
+           ry="4"
+           rx="4"
+           y="187.46535"
+           x="934.08801"
+           height="21.920309"
+           width="32.526913"
+           id="rect4395"
+           style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:#4d4d4d;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <circle
+           r="68.589355"
+           cy="267.36841"
+           cx="951.05859"
+           id="circle4397"
+           style="opacity:1;fill:url(#radialGradient4401);fill-opacity:1;stroke:#666666;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           sodipodi:nodetypes="ccccc"
+           inkscape:connector-curvature="0"
+           id="path4399"
+           d="m 900.70902,238.90718 c 13.44677,-23.07488 27.52387,-24.40102 27.52387,-24.40102 0,0 0.74573,-2.372 0.53562,5.85009 -9.69318,2.89492 -23.22705,24.91642 -23.22705,24.91642 z"
+           style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.94425499px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      </g>
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="brick"
-     style="display:none"
+     style="display:inline"
      sodipodi:insensitive="true">
     <path
        sodipodi:nodetypes="sssssccccsss"
@@ -1240,7 +1374,7 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="one brick"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <rect
        style="display:inline;opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.88178331;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1586,6 +1720,106 @@
          width="205.17918"
          id="rect5595"
          style="display:inline;opacity:1;fill:#ff8080;fill-opacity:1;stroke:none;stroke-width:0.88178331;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="kaboom"
+     sodipodi:insensitive="true"
+     style="display:none">
+    <g
+       id="g4422"
+       transform="translate(538,992)"
+       inkscape:export-filename="/home/mvandest/public_html/thumptrump/images/kaboom.png"
+       inkscape:export-xdpi="89.990524"
+       inkscape:export-ydpi="89.990524">
+      <path
+         transform="matrix(1.0154524,-0.19454459,0.19321852,1.0085308,-120.97593,151.26783)"
+         d="M 1136,777 927.99187,692.14156 1018.055,897.94966 858.35445,739.94941 862.80256,964.55697 775.72258,757.46902 693.87852,966.68157 692.67623,742.03319 537,904 621.85844,695.99187 416.05034,786.05498 574.05059,626.35445 349.44303,630.80256 556.53098,543.72258 347.31843,461.87852 571.96681,460.67623 410,305 618.00813,389.85844 527.94502,184.05034 687.64555,342.05059 683.19744,117.44303 770.27742,324.53098 852.12148,115.31843 853.32377,339.96681 1009,178 924.14156,386.00813 1129.9497,295.94502 971.94941,455.64555 l 224.60759,-4.44811 -207.08798,87.07998 209.21258,81.84406 -224.64841,1.20229 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="0.77282159"
+         sodipodi:arg1="0.57647204"
+         sodipodi:r2="216.48615"
+         sodipodi:r1="432.97229"
+         sodipodi:cy="541"
+         sodipodi:cx="773"
+         sodipodi:sides="16"
+         id="path4404"
+         style="opacity:1;fill:url(#radialGradient4412);fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         sodipodi:type="star" />
+      <path
+         sodipodi:type="star"
+         style="opacity:1;fill:#ff8080;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4418"
+         sodipodi:sides="16"
+         sodipodi:cx="773"
+         sodipodi:cy="541"
+         sodipodi:r1="432.97229"
+         sodipodi:r2="216.48615"
+         sodipodi:arg1="0.57647204"
+         sodipodi:arg2="0.77282159"
+         inkscape:flatsided="false"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="M 1136,777 927.99187,692.14156 1018.055,897.94966 858.35445,739.94941 862.80256,964.55697 775.72258,757.46902 693.87852,966.68157 692.67623,742.03319 537,904 621.85844,695.99187 416.05034,786.05498 574.05059,626.35445 349.44303,630.80256 556.53098,543.72258 347.31843,461.87852 571.96681,460.67623 410,305 618.00813,389.85844 527.94502,184.05034 687.64555,342.05059 683.19744,117.44303 770.27742,324.53098 852.12148,115.31843 853.32377,339.96681 1009,178 924.14156,386.00813 1129.9497,295.94502 971.94941,455.64555 l 224.60759,-4.44811 -207.08798,87.07998 209.21258,81.84406 -224.64841,1.20229 z"
+         transform="matrix(0.30446759,-0.20368572,0.20229734,0.30239226,418.70368,536.28135)" />
+      <text
+         transform="matrix(0.96091378,-0.27684782,0.27684782,0.96091378,0,0)"
+         sodipodi:linespacing="125%"
+         id="text4414"
+         y="776.31073"
+         x="626.5614"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:108.10058594px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Skater Girls Rock';-inkscape-font-specification:'Skater Girls Rock';fill:#ffffff"
+           y="776.31073"
+           x="626.5614"
+           id="tspan4416"
+           sodipodi:role="line">KA-BOOM!!</tspan></text>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="impact">
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4429"
+       cx="723.5"
+       cy="674.41028"
+       r="30.5"
+       inkscape:export-filename="/home/mvandest/public_html/thumptrump/images/bubble.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g4435"
+       transform="matrix(2.0979304,-0.33451071,0.33451071,2.0979304,-681.87845,-506.77095)"
+       inkscape:export-filename="/home/mvandest/public_html/thumptrump/images/cross.png"
+       inkscape:export-xdpi="89.842659"
+       inkscape:export-ydpi="89.842659">
+      <rect
+         transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
+         ry="4"
+         rx="4"
+         y="-0.8912428"
+         x="920.01788"
+         height="8.5"
+         width="49"
+         id="rect4431"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4433"
+         width="49"
+         height="8.5"
+         x="-21.141243"
+         y="940.26788"
+         rx="4"
+         ry="4"
+         transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)" />
     </g>
   </g>
 </svg>
