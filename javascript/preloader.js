@@ -3,6 +3,7 @@
 GameState.Preloader = function(game){
 	this.ready = false;
 	this.sounds = [];
+	this.loadThese = [];
 };
 
 GameState.Preloader.prototype = {
@@ -21,7 +22,7 @@ GameState.Preloader.prototype = {
 		this.images = [ 'bg', 'gameover', 'text', 'stand', 'groundmask', 'bomb', 'kaboom', 'bubble', 'cross', 'title', 'intro', 'setup'];
 
 		var debug = true;
-		var sounddebug = true;
+		var sounddebug = false;
 
 		var folder = 'images/smaller/';
 		var ext = '-fs8.png';
@@ -73,20 +74,20 @@ GameState.Preloader.prototype = {
 			var key = sfx_keys[k];
 			var fname = this.sfx[sfx_keys[k]];
 
-			var loadThese = [];
+			this.loadThese = [];
 			if(!sounddebug) {
 				if (have_webm) {
-					loadThese.push( 'sfx/' + fname + '.webm' );
+					this.loadThese.push( 'sfx/' + fname + '.webm' );
 				}
 				if (have_ogg) {
-					loadThese.push( 'sfx/' + fname + '.ogg' );
+					this.loadThese.push( 'sfx/' + fname + '.ogg' );
 				}
 			}
 			if (have_mp3) {
-				loadThese.push( 'sfx/' + fname + '.mp3' );
+				this.loadThese.push( 'sfx/' + fname + '.mp3' );
 			}
 
-			this.load.audio(key, loadThese);
+			this.load.audio(key, this.loadThese);
 		}
 	},
   	create: function() {
@@ -96,15 +97,14 @@ GameState.Preloader.prototype = {
 		if (!this.ready) {
 			// check if all the sounds are loaded
 			var count = 0;
-			for (var s = 0; s < this.sounds.length; s++ ) {
-				if (this.cache.isSoundDecoded( this.sounds[s] )) {
+			for (var s = 0; s < this.loadThese.length; s++ ) {
+				if (this.cache.isSoundDecoded( this.loadThese[s] )) {
 					count++;
 				}
 			}
 
-			if ( count >= this.sounds.length) {
-				this.ready = true;
-				
+			if ( count >= this.loadThese.length) {
+				this.ready = true;				
 			}
 			this.game.state.start('Title', true, false);
 		}

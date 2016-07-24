@@ -197,6 +197,7 @@ Trump.prototype = {
 
 		if(brickIndexes.length < 1) {
 			this.parent.doGameOver();
+			return;
 		}
 
 		var r = this.game.rnd.integerInRange(0, brickIndexes.length - 1);
@@ -206,10 +207,14 @@ Trump.prototype = {
 		//if(this.parent.bricks[r].isInactive() || this.parent.bricks[r].isSliding()){ 
 			// take this out
 			//this.parent.bricks[r].makeActive(); 
-
-			this.currentBrickIndex = index;
-			this.destination = { 'x': this.parent.bricks[index].x + 160, 'y': this.parent.bricks[index].y + 180 };
-			this.currentState = Trump.STATES.MOVETOBRICK;
+			// console.log('index', index);
+			if(index) {
+				this.currentBrickIndex = index;
+				this.destination = { 'x': this.parent.bricks[index].x + 160, 'y': this.parent.bricks[index].y + 180 };
+				this.currentState = Trump.STATES.MOVETOBRICK;
+			} else {
+				this.chooseNextAction();
+			}
 		//}
 	},
 	'moveToDestination': function() {	
