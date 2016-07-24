@@ -192,6 +192,11 @@ Trump.prototype = {
 	'pickNextBrick': function() {
 
 		var brickIndexes = this.findAllGoodBricks();
+
+		if(brickIndexes.length < 1) {
+			this.parent.doGameOver();
+		}
+
 		var r = this.game.rnd.integerInRange(0, brickIndexes.length - 1);
 
 		var index = brickIndexes[r];
