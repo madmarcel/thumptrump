@@ -6,6 +6,8 @@ window.onload = function() {
     var game = new Phaser.Game(1366, 768, Phaser.AUTO, parent);
     game.state.add('Boot', GameState.Boot);
     game.state.add('Preloader', GameState.Preloader);
+    game.state.add('Title', GameState.Title);
+    game.state.add('Intro', GameState.Intro);
     game.state.add('Game', GameState.Game);
 
     game.state.start('Boot');

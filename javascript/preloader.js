@@ -2,6 +2,7 @@
 
 GameState.Preloader = function(game){
 	this.ready = false;
+	this.sounds = [];
 };
 
 GameState.Preloader.prototype = {
@@ -17,7 +18,7 @@ GameState.Preloader.prototype = {
 		// this statement sets the blue bar to represent the actual percentage of data loaded
 		this.load.setPreloadSprite(this.preloadBar);
 		// load the images
-		this.images = [ 'bg', 'gameover', 'text', 'stand', 'groundmask', 'bomb', 'kaboom', 'bubble', 'cross' ];
+		this.images = [ 'bg', 'gameover', 'text', 'stand', 'groundmask', 'bomb', 'kaboom', 'bubble', 'cross', 'title', 'intro'];
 
 		var debug = true;
 		var sounddebug = true;
@@ -89,17 +90,17 @@ GameState.Preloader.prototype = {
 		if (!this.ready) {
 			// check if all the sounds are loaded
 			var count = 0;
-			/*for (var s = 0; s < this.sounds.length; s++ ) {
+			for (var s = 0; s < this.sounds.length; s++ ) {
 				if (this.cache.isSoundDecoded( this.sounds[s] )) {
 					count++;
 				}
-			}*/
+			}
 
-			/*if ( count >= this.sounds.length) {
+			if ( count >= this.sounds.length) {
 				this.ready = true;
 				
-			}*/
-this.game.state.start('Game', true, false, this.config);
+			}
+			this.game.state.start('Title', true, false);
 		}
 	}
 };
