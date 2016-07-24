@@ -170,8 +170,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="850.80791"
-     inkscape:cy="354.68661"
+     inkscape:cx="668.37437"
+     inkscape:cy="382.97088"
      inkscape:document-units="px"
      inkscape:current-layer="g4826"
      showgrid="false"
@@ -1862,7 +1862,7 @@
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="Title"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <rect
        style="opacity:1;fill:url(#radialGradient4800);fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2598,7 +2598,7 @@
          id="tspan4822">escape! </tspan></text>
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      inkscape:label="Intro"
      id="g4826"
      inkscape:groupmode="layer">
@@ -3025,7 +3025,7 @@
          y="689.5592"
          x="61.932369"
          sodipodi:role="line"
-         id="tspan5086">tasty snacks: Karen</tspan></text>
+         id="tspan5086">tasty snacks: Carrie</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
