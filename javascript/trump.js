@@ -21,6 +21,8 @@ function Trump(game, x, y, parent){
 	this.trumpSFX.push(this.game.add.audio('wellbeat',1,true));
 	this.trumpSFX.push(this.game.add.audio('losers',1,true));
 	this.trumpSFX.push(this.game.add.audio('hardtime',1,true));
+	this.trumpSFX.push(this.game.add.audio('trumptrumptrump',1,true));
+	this.trumpSFX.push(this.game.add.audio('pussy',1,true));
 
 	
 

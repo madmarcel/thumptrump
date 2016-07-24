@@ -58,7 +58,9 @@ GameState.Preloader.prototype = {
 			'fuckwall': 'fuckwall',
 			'wellbeat': 'wellbeat',
 			'losers': 'losers',
-			'hardtime': 'hardtime'
+			'hardtime': 'hardtime',
+			'trumptrumptrump': 'trumptrumptrump',
+			'pussy': 'pussy'
 
 		};
 		
