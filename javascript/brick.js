@@ -23,7 +23,7 @@ function Brick(game, x, y, key, key2, parent){
 	this.scrapes.push(this.game.add.audio('scrape2',1,true));
 
     this.thumpSFX = this.game.add.audio('thump',1,false);
-	this.slideInterval = 0.5;
+	this.slideInterval = 0.05;
 
     this.cross = this.game.add.sprite(x + 55, y + 40, 'cross');
     this.cross.visible = false;
@@ -93,7 +93,7 @@ Brick.prototype = {
 	
     'slideIn': function() {
 		var stepBack = 3;
-		if(this.slidelevel <= 3){
+		if(this.slidelevel <= 4){
 			this.sprite.x += 5 * this.slidelevel;
 			this.sprite.y -= 3 * this.slidelevel;
 			this.slidelevel = 0;
@@ -101,7 +101,7 @@ Brick.prototype = {
 			this.timestamp = this.game.time.time;
 			this.makeInactive();
 		}
-		if(this.slidelevel > 5){
+		if(this.slidelevel >=	 5){
 			this.sprite.x += 5 * stepBack;
 			this.sprite.y -= 3 * stepBack;
 			this.slidelevel -= stepBack;

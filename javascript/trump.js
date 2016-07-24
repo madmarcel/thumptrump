@@ -15,6 +15,12 @@ function Trump(game, x, y, parent){
 
 	this.trump = this.game.add.sprite(x , y, 'trump', 'talk1');
 	this.trump.anchor.setTo(0.5, 1.0);
+	
+	this.trumpSFX = [];
+	this.trumpSFX.push(this.game.add.audio('fuckwall',1,true));
+	this.trumpSFX.push(this.game.add.audio('wellbeat',1,true));
+	this.trumpSFX.push(this.game.add.audio('losers',1,true));
+	this.trumpSFX.push(this.game.add.audio('hardtime',1,true));
 
 	
 
@@ -50,7 +56,8 @@ Trump.STATES = {
 	'GAMEOVER': 4,
 	'MOVETOBRICK': 5,
 	'MOVETOINSULT': 6,
-	'MOVETOBOMB': 7	
+	'MOVETOBOMB': 7,
+	'TALKING': 8
 };
 
 Trump.prototype = {
@@ -116,20 +123,23 @@ Trump.prototype = {
 			case Trump.STATES.MOVETOBOMB:				
 				this.doBomb();
 			break;
+			case Trump.STATES.TALKING:
+				this.pickNextBrick();
+			break;
 			case Trump.STATES.PUSHING:
 
 				var r = this.game.rnd.integerInRange(0, 5);
 
-				/*if( r > 1) {
+				if( r > 1) {
 					// either pick the next brick
 					this.pickNextBrick();
 				} else if (r === 0 ){
 					// or insult the player
 					this.pickInsultDest();
 				} else if (r === 1 ){
-					// or drop a bomb */
+					// or drop a bomb 
 					this.pickBombDest();
-				// }
+				}
 
 			break;
 			case Trump.STATES.CHEER:
@@ -217,26 +227,40 @@ Trump.prototype = {
 
 		var brick = this.parent.bricks[this.currentBrickIndex];
 
-        if( brick.isSliding() && delta >= brick.slideInterval) {
-			brick.slideOut();
-			this.timestamp = this.game.time.time;
-		}
-
+		
+		
+			if( brick.isSliding() && delta >= brick.slideInterval) {
+				brick.slideOut();
+				this.timestamp = this.game.time.time;
+				var chancy = this.game.rnd.integerInRange(0, 3);
+				if(chancy < 1){
+				//	brick.slideOut();
+					this.chooseNextAction();
+				}
+		
+			}
+		
+		//30% chance to do another action
+		
 		if( brick.isDone() || brick.isFalling() || brick.isInactive() ) {
 			// we're done with this brick, on to the next one
 			this.chooseNextAction();
 		}
+		
 
 		// TODO - handle player knocking brick back
 
 	},
 	'doInsult': function() {
-		this.currentState = Trump.STATES.INSULT;
-		var delta = this.game.time.elapsedSecondsSince(this.timestamp);
-		if(delta >= 2.0) {
-			this.timestamp = this.game.time.time;
-			this.chooseNextAction();
-		}
+		this.currentState = Trump.STATES.TALKING;
+		
+		var r = this.game.rnd.integerInRange(0,this.trumpSFX.length - 1);
+		this.trumpSFX[r].onStop.addOnce(this.insultDone, this);
+		this.trumpSFX[r].play('', 0, 1.0, false);
+		
+	},
+	'insultDone': function() {
+		this.chooseNextAction();
 	},
 	'isMoving': function() {
 		return this.currentState === Trump.STATE.MOVING;

@@ -238,7 +238,7 @@ GameState.Game.prototype = {
 		// console.log(keyEvent.event.key);
 
 		// if gameover and user presses 0
-		if(keyEvent.event.key === '0' && this.isGameOver()) {
+		if((keyEvent.event.key === '0' || keyEvent.event.key == 'W' || keyEvent.event.key == 'w') && this.isGameOver()) {
 			this.resetGame();
 			// start a new state
 			this.state.start('Game', true, false);

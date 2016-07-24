@@ -54,7 +54,11 @@ GameState.Preloader.prototype = {
 			'thump': 'thump',
 			'fired': 'fired',
 			'finished': 'finished',
-			'kaboom': 'kaboom'
+			'kaboom': 'kaboom',
+			'fuckwall': 'fuckwall',
+			'wellbeat': 'wellbeat',
+			'losers': 'losers',
+			'hardtime': 'hardtime'
 
 		};
 		
