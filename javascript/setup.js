@@ -1,14 +1,14 @@
 'use strict';
 
-GameState.Intro = function(game){
+GameState.Setup = function(game){
 };
 
-GameState.Intro.prototype = {
+GameState.Setup.prototype = {
 	preload: function() {
 		
 	},
   	create: function() {
-		this.title = this.add.sprite(this.world.centerX, this.world.centerY, 'intro');
+		this.title = this.add.sprite(this.world.centerX, this.world.centerY, 'setup');
 		this.title.anchor.setTo(0.5,0.5);
 		this.title.inputEnabled = true;
 		this.title.events.onInputDown.add(this.doIntro, this);
@@ -16,6 +16,6 @@ GameState.Intro.prototype = {
 
 	},
 	doIntro: function() {
-		this.game.state.start('Setup', true, false);
+		this.game.state.start('Game', true, false);
 	}
 };

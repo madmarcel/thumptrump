@@ -170,7 +170,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="688.17335"
+     inkscape:cx="850.80791"
      inkscape:cy="354.68661"
      inkscape:document-units="px"
      inkscape:current-layer="g4826"
@@ -1862,7 +1862,7 @@
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="Title"
-     style="display:none"
+     style="display:inline"
      sodipodi:insensitive="true">
     <rect
        style="opacity:1;fill:url(#radialGradient4800);fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -2598,7 +2598,7 @@
          id="tspan4822">escape! </tspan></text>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="Intro"
      id="g4826"
      inkscape:groupmode="layer">
@@ -2888,14 +2888,14 @@
        sodipodi:linespacing="125%"
        id="text4989"
        y="729.82458"
-       x="1257.6445"
+       x="1235.7242"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.75675964px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Skater Girls Rock';-inkscape-font-specification:'Skater Girls Rock'"
          y="729.82458"
-         x="1257.6445"
+         x="1235.7242"
          id="tspan4991"
-         sodipodi:role="line">Click to start</tspan></text>
+         sodipodi:role="line">Click to continue</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;line-height:125%;font-family:'Autour One';-inkscape-font-specification:'Autour One';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2905,56 +2905,56 @@
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5021"
-         x="691.04987"
+         x="689.70709"
          y="260.29733"
-         style="-inkscape-font-specification:'Bitstream Charter';font-family:'Bitstream Charter';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">In June 2017, the Mexican World Government has had enough. </tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter'">In June 2017, the Mexican World Government has had enough. </tspan><tspan
          sodipodi:role="line"
          x="685.89362"
          y="294.67233"
          id="tspan5023"
-         style="-inkscape-font-specification:'Bitstream Charter';font-family:'Bitstream Charter';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">By government decree a wall is built <tspan
-   style="-inkscape-font-specification:'Bitstream Charter Bold';font-family:'Bitstream Charter';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter'">By government decree a wall is built <tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter Bold'"
    id="tspan5047">around</tspan> Donald Trump.</tspan><tspan
          sodipodi:role="line"
          x="685.89362"
          y="329.04733"
          id="tspan5025"
-         style="-inkscape-font-specification:'Bitstream Charter';font-family:'Bitstream Charter';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal" /><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter'" /><tspan
          sodipodi:role="line"
          x="685.89362"
          y="363.42233"
          id="tspan5027"
-         style="-inkscape-font-specification:'Bitstream Charter';font-family:'Bitstream Charter';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">Your job is to <tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter'">Your job is to <tspan
    style="font-weight:bold"
    id="tspan5094">preserve</tspan> this wall around Trump.</tspan><tspan
          sodipodi:role="line"
          x="685.89362"
          y="397.79733"
          id="tspan5029"
-         style="-inkscape-font-specification:'Bitstream Charter';font-family:'Bitstream Charter';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"><tspan
-   style="-inkscape-font-specification:'Bitstream Charter Bold';font-family:'Bitstream Charter';font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter'"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter Bold'"
    id="tspan5061">Thump the bricks back into place</tspan>, and watch out:</tspan><tspan
          sodipodi:role="line"
          x="685.89362"
          y="432.17233"
          id="tspan5033"
-         style="-inkscape-font-specification:'Bitstream Charter';font-family:'Bitstream Charter';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">There are rumours Donald Trump has access to bombs!</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter'">There are rumours Donald Trump has access to bombs!</tspan><tspan
          sodipodi:role="line"
          x="685.89362"
          y="466.54733"
          id="tspan5031"
-         style="-inkscape-font-specification:'Bitstream Charter';font-family:'Bitstream Charter';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal" /></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Charter';-inkscape-font-specification:'Bitstream Charter'" /></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot5039"
-       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Arial;font-style:normal;font-weight:normal;font-size:27.5px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Arial;font-stretch:normal;font-variant:normal;text-anchor:middle;text-align:center"><flowRegion
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
          id="flowRegion5041"><rect
            id="rect5043"
            width="572.75647"
            height="150.61374"
            x="175.36249"
            y="251.81204" /></flowRegion><flowPara
-         id="flowPara5045"></flowPara></flowRoot>    <text
+         id="flowPara5045" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="907.63208"
@@ -2987,8 +2987,8 @@
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5059"
-         x="205.33891"
-         y="567.88879">  </tspan></text>
+         x="201.52544"
+         y="567.88879" /></text>
     <text
        sodipodi:linespacing="125%"
        id="text5063"

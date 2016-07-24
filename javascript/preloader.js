@@ -18,7 +18,7 @@ GameState.Preloader.prototype = {
 		// this statement sets the blue bar to represent the actual percentage of data loaded
 		this.load.setPreloadSprite(this.preloadBar);
 		// load the images
-		this.images = [ 'bg', 'gameover', 'text', 'stand', 'groundmask', 'bomb', 'kaboom', 'bubble', 'cross', 'title', 'intro'];
+		this.images = [ 'bg', 'gameover', 'text', 'stand', 'groundmask', 'bomb', 'kaboom', 'bubble', 'cross', 'title', 'intro', 'setup'];
 
 		var debug = true;
 		var sounddebug = true;
