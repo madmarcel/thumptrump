@@ -7,6 +7,10 @@ GameState.Game = function(game){
 	var self = this;
 
 	this.currentState = GameState.Game.STATES.PLAYING;
+
+	this.config = {};
+
+	this.score = 0;
 };
 
 GameState.Game.STATES = {
@@ -15,19 +19,20 @@ GameState.Game.STATES = {
 };
 
 GameState.Game.prototype = {
-	init: function() {
+	init: function( config ) {
 		this.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
+
+		this.config = config;
 	},
 	preload: function() {
 	},
 	create: function() {
-		this.setupKeyboardControls();
-		// this.game.stage.backgroundColor = "#7a449c";
+		
 		this.game.add.sprite(0, 0, 'bg');
 		this.timestamp = this.game.time.time;
 				
 		// introducing Mr Trump
-		this.trump = new Trump(this.game, 720, 400, this);
+		this.trump = new Trump(this.game, 720, 400, this, this.config.profanity);
 
 		this.mask = this.game.add.sprite( 0, 768 - 69, 'groundmask');
 
@@ -38,18 +43,60 @@ GameState.Game.prototype = {
 		
 		var brickCounter = 0;
 
-		var keymapping = {
-			0: 'w',
-			1: 'a',
-			2: 's',
-			3: 'd',
-			4: 'f',
-			5: 'g',
-			6: 'ArrowDown',
-			7: 'ArrowUp',
-			8: 'ArrowLeft',
-			9: 'ArrowRight'
+		var inputMethod = this.config.controlMethod;		
+
+		this.keymapping = {
+			'makeymakey': {
+				0: 'w',
+				1: 'a',
+				2: 's',
+				3: 'd',
+				4: 'f',
+				5: 'g',
+				6: 'ArrowDown',
+				7: 'ArrowUp',
+				8: 'ArrowLeft',
+				9: 'ArrowRight'
+			},
+			'keyboard': {
+				0: 'c',
+				1: 'v',
+				2: 'b',
+				3: 'f',
+				4: 'g',
+				5: 'r',
+				6: 't',
+				7: 'y',
+				8: '5',
+				9: '6'
+			},
+			'numpad': {
+				0: '1',
+				1: '2',
+				2: '3',
+				3: '5',
+				4: '6',
+				5: '7',
+				6: '8',
+				7: '9',
+				8: '/',
+				9: '*'
+			},
+			'mouse': {
+				0: '.',
+				1: '.',
+				2: '.',
+				3: '.',
+				4: '.',
+				5: '.',
+				6: '.',
+				7: '.',
+				8: '.',
+				9: '.'
+			}
 		};
+
+		this.setupKeyboardControls();
 
 		var drawRow = function(x, y, offset){
 			if(offset) {
@@ -57,7 +104,10 @@ GameState.Game.prototype = {
 				self.game.add.sprite( x, y, 'bricks', 'halfbrick_m');
 				
 				for(var i = 0; i < 2; i++){
-					var b = new Brick(self.game, 210 * i + x + 110, y, '' + brickCounter, keymapping[brickCounter], self);					
+					var b = new Brick(self.game, 210 * i + x + 110, y, self.keymapping[inputMethod][brickCounter], self);
+					if(inputMethod === 'mouse') {
+						b.enableMouse();
+					}					
 					brickCounter++;
 					self.bricks.push(b);
 				};
@@ -66,7 +116,10 @@ GameState.Game.prototype = {
 				
 			} else {
 				for(var i = 0; i < 3; i++){
-					var b = new Brick(self.game, 215 * i + x, y, '' + brickCounter, keymapping[brickCounter], self);
+					var b = new Brick(self.game, 215 * i + x, y, self.keymapping[inputMethod][brickCounter], self);
+					if(inputMethod === 'mouse') {
+						b.enableMouse();
+					}
 					brickCounter++;
 					self.bricks.push(b);
 				};
@@ -83,14 +136,31 @@ GameState.Game.prototype = {
 		}
 
 		this.bomb = new Bomb(this.game, 720, 660, this);
+		if(inputMethod === 'mouse') {
+			this.bomb.enableMouse();
+		}
 
 		// game over sign
 		this.sign = this.game.add.sprite(this.game.world.centerX, -200, 'gameover');
 		this.sign.anchor.setTo(0.5, 0.5);
 		this.sign.visible = false;
 
+		this.restartGameText = 'Hit NUMPAD_1 to try again';
+
+		switch(this.config.controlMethod) {
+			case 'mouse': 
+				this.restartGameText = 'Click to try again';
+				break;
+			case 'keyboard': 
+				this.restartGameText = 'Hit C to try again';
+				break;
+			case 'makeymakey': 
+				this.restartGameText = 'Hit W to try again';
+				break;
+		}
+
 		// retry text
-		this.text = this.game.add.sprite(this.game.world.centerX, 570, 'text');
+		this.text = this.game.add.text(this.game.world.centerX, 570, this.restartGameText);
 		this.text.anchor.setTo(0.5, 0.5);
 		this.text.visible = false;
 
@@ -98,13 +168,12 @@ GameState.Game.prototype = {
 		this.gameoversfx.push(this.game.add.audio('fired', 1, false));
 		this.gameoversfx.push(this.game.add.audio('finished', 1, false));
 
-
+		this.music = this.add.audio('gametheme',1,true);
+		// play it quietly
+		this.music.play('', 0, 0.2, true);
 
 	},
 	update: function() {
-		if(this.game.input.activePointer.isDown) {
-			console.log(this.game.input.activePointer.x + this.game.camera.x, this.game.input.activePointer.y);
-		}
 
 		if(!this.isGameOver()) {
 			// not dead, so update the bricks
@@ -113,14 +182,6 @@ GameState.Game.prototype = {
 					this.bricks[i].update();
 				}
 			}
-
-			/*var delta = this.game.time.elapsedSecondsSince(this.timestamp);
-
-				if( delta >= 4.5) {
-					var r = this.game.rnd.integerInRange(0,this.bricks.length - 1);
-					if(this.bricks[r].isInactive()){ this.bricks[r].makeActive(); }
-					this.timestamp = this.game.time.time;
-				}*/
 			
 			var count = 0;
 			for(var i = 0; i < this.bricks.length; i++ ) {
@@ -134,6 +195,15 @@ GameState.Game.prototype = {
 
 			this.trump.update();
 			this.bomb.update();
+		} else {
+			if(this.config.controlMethod === 'mouse') {
+				if(this.game.input.activePointer.isDown) {
+					this.resetGame();
+					// start a new state
+					this.music.stop();
+					this.state.start('Game', true, false, this.config);
+					}
+			}
 		}
 	},
 	doGameOver: function() {
@@ -162,6 +232,7 @@ GameState.Game.prototype = {
 	// reset state, score, etc
 	resetGame: function() {
 		this.currentState = GameState.Game.STATES.PLAYING;
+		this.score = 0;
 	},
 	// full screen
 	toggleFullscreen: function() {
@@ -179,81 +250,53 @@ GameState.Game.prototype = {
 		var f_key = this.input.keyboard.addKey(Phaser.KeyCode.P);
 		f_key.onDown.add(this.toggleFullscreen, this);
 
-		var one = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_5);
-		one.onDown.add(this.keyPress, this);
-		var two = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_4);
-		two.onDown.add(this.keyPress, this);
-		var three = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_6);
-		three.onDown.add(this.keyPress, this);
-		var four = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_7);
-		four.onDown.add(this.keyPress, this);
-		var five = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_8);
-		five.onDown.add(this.keyPress, this);
-		var six = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_9);
-		six.onDown.add(this.keyPress, this);
-		var seven = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_1);
-		seven.onDown.add(this.keyPress, this);
-		var eight = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_2);
-		eight.onDown.add(this.keyPress, this);
-		var nine = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_3);
-		nine.onDown.add(this.keyPress, this);
-		var ten = this.input.keyboard.addKey(Phaser.KeyCode.NUMPAD_0);
-		ten.onDown.add(this.keyPress, this);
+		var keymappings = {
+			'makeymakey': [
+				'W', 'A', 'S', 'D', 'F', 'G', 'UP', 'DOWN', 'LEFT', 'RIGHT'
+			],
+			'keyboard': [
+				'C', 'V', 'B', 'F', 'G', 'R', 'T', 'Y', 'FIVE', 'SIX'
+			],
+			'numpad': [
+				'NUMPAD_1', 'NUMPAD_2', 'NUMPAD_3', 'NUMPAD_4', 'NUMPAD_5', 'NUMPAD_6', 'NUMPAD_7', 'NUMPAD_8', 'NUMPAD_9', 'NUMPAD_DIVIDE', 'NUMPAD_MULTIPLY'
+			],
+			'mouse': []
+		};
 
-		var sp = this.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR); // ' '
-		sp.onDown.add(this.keyPress, this);
+		var keys = keymappings[this.config.controlMethod];
 
-		var up = this.input.keyboard.addKey(Phaser.KeyCode.UP); // ArrowUp
-		up.onDown.add(this.keyPress, this);
+		for(var i = 0; i < keys.length; i++) {
+			var t = this.input.keyboard.addKey(Phaser.KeyCode[keys[i]]);
+			t.onDown.add(this.keyPress, this);
+		}
 
-		var down = this.input.keyboard.addKey(Phaser.KeyCode.DOWN); // ArrowDown
-		down.onDown.add(this.keyPress, this);
-
-		var left = this.input.keyboard.addKey(Phaser.KeyCode.LEFT); // ArrowLeft
-		left.onDown.add(this.keyPress, this);
-
-		var right = this.input.keyboard.addKey(Phaser.KeyCode.RIGHT); // ArrowRight
-		right.onDown.add(this.keyPress, this);
-		
-		var a = this.input.keyboard.addKey(Phaser.KeyCode.A);
-		a.onDown.add(this.keyPress, this);
-
-		var s = this.input.keyboard.addKey(Phaser.KeyCode.S);
-		s.onDown.add(this.keyPress, this);
-
-		var w = this.input.keyboard.addKey(Phaser.KeyCode.W);
-		w.onDown.add(this.keyPress, this);
-
-		var d = this.input.keyboard.addKey(Phaser.KeyCode.D);
-		d.onDown.add(this.keyPress, this);
-
-		var f = this.input.keyboard.addKey(Phaser.KeyCode.F);
-		f.onDown.add(this.keyPress, this);
-
-		var g = this.input.keyboard.addKey(Phaser.KeyCode.G);
-		g.onDown.add(this.keyPress, this);
+		if(this.config.controlMethod !== 'mouse') {
+			var sp = this.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR); // ' '
+			sp.onDown.add(this.keyPress, this);
+		}
 	},
 	keyPress: function(keyEvent) {
 
-		// console.log(keyEvent.event.key);
-
-		// if gameover and user presses 0
-		if((keyEvent.event.key === '0' || keyEvent.event.key == 'W' || keyEvent.event.key == 'w') && this.isGameOver()) {
-			this.resetGame();
-			// start a new state
-			this.state.start('Game', true, false);
+		if(this.isGameOver()) {
+			// if gameover and user presses 1
+			if(keyEvent.event.key === '1' || keyEvent.event.key == 'W' || keyEvent.event.key == 'w' || keyEvent.event.key == 'C' || keyEvent.event.key == 'c') {
+				this.resetGame();
+				// start a new state
+				this.music.stop();
+				this.state.start('Game', true, false, this.config);
+			}
 		}
 
-		if(keyEvent.event.key === ' ') {
-			this.bomb.thump();
-			return;
+		if(this.config.controlMethod !== 'mouse') {
+			if(keyEvent.event.key === ' ') {
+				this.bomb.thump();
+				return;
+			}
+
+			// pass keypress to all the bricks
+			for(var i = 0; i < this.bricks.length; i++) {
+				this.bricks[i].thump(keyEvent.event.key);
+			}
 		}
-
-		// pass keypress to all the bricks
-		for(var i = 0; i < this.bricks.length; i++) {
-			this.bricks[i].thump(keyEvent.event.key);
-		}
-
-
 	}
 };

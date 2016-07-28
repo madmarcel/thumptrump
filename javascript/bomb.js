@@ -46,6 +46,11 @@ Bomb.STATES = {
 };
 
 Bomb.prototype = {
+    'enableMouse': function() {
+        this.sprite.inputEnabled = true;
+        this.sprite.events.onInputDown.add(this.thump, this);
+		this.sprite.input.useHandCursor = true;
+    },
     'update': function() { 
         switch(this.currentState) {
             case Bomb.STATES.INACTIVE:
@@ -72,15 +77,13 @@ Bomb.prototype = {
             break;
 
             case Bomb.STATES.EXPLODING:
-                // add sfx here
-
-                this.sfx.play();
-
                 this.boom.scale.setTo(0.1, 0.1);
                 this.boom.x = this.sprite.x;
                 this.boom.y = this.sprite.y;
                 this.boom.visible = true;
+                this.sfx.play();
                 var tween = this.game.add.tween(this.boom.scale).to( { x: 1.0, y: 1.0 }, 300, Phaser.Easing.Linear.None, true );
+                this.game.camera.shake(0.05, 500);
 		        tween.onComplete.addOnce(this.boomDone, this);
                 this.currentState = Bomb.STATES.DONE;
             break;

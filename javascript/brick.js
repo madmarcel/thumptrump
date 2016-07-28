@@ -1,12 +1,11 @@
 'use strict';
 
-function Brick(game, x, y, key, key2, parent){
+function Brick(game, x, y, key, parent){
 
     this.game = game;	
     this.x = x;
     this.y = y;
     this.key = key;
-    this.altkey = key2;
     this.parent = parent;
 
     this.slidelevel = 0;
@@ -30,6 +29,8 @@ function Brick(game, x, y, key, key2, parent){
 
     this.bubble = this.game.add.sprite(x + 60, y + 45, 'bubble');
     this.bubble.visible = false;
+
+    this.multiplier = 1;
 };
 
 /* static constants */
@@ -49,21 +50,19 @@ Brick.MAXLEVEL = 10;
 //Brick.SLIDE_INTERVAL = 0.5;
 
 Brick.prototype = {
+    'enableMouse': function() {
+        this.sprite.inputEnabled = true;
+        this.sprite.events.onInputDown.add(this.doClick, this);
+		this.sprite.input.useHandCursor = true;
+    },
+    'doClick': function() {
+        this.thump('.');
+    },
     'update': function() {
 
         if( this.isDone() ) {
             return;
-        }
-
-        /*if( this.isSliding() ) {
-            var delta = this.game.time.elapsedSecondsSince(this.timestamp);
-
-            if( delta >= this.slideInterval) {
-				
-                this.slideOut();
-                this.timestamp = this.game.time.time;
-            }
-        }*/       
+        }     
     },
 
     'slideSFX': function() {
@@ -74,10 +73,12 @@ Brick.prototype = {
 
     'slideOut': function() {
 
-        this.sprite.x -= 5;
-        this.sprite.y += 3;
+        for(var i = 0; i < this.multiplier; i++) {
+            this.sprite.x -= 5;
+            this.sprite.y += 3;
 
-        this.slidelevel++;
+            this.slidelevel++;
+        }
 
         if( this.slidelevel  === 1 || this.slidelevel === 5 ) {
             this.slideSFX();
@@ -97,15 +98,15 @@ Brick.prototype = {
 			this.sprite.x += 5 * this.slidelevel;
 			this.sprite.y -= 3 * this.slidelevel;
 			this.slidelevel = 0;
-			this.slideInterval = 0.5;
+			//this.slideInterval = 0.5;
 			this.timestamp = this.game.time.time;
 			this.makeInactive();
 		}
-		if(this.slidelevel >=	 5){
+		if(this.slidelevel > 4){
 			this.sprite.x += 5 * stepBack;
 			this.sprite.y -= 3 * stepBack;
 			this.slidelevel -= stepBack;
-			this.slideInterval = 0.7;
+			//this.slideInterval = 0.7;
 			//reset time stamp, wait 0.7
 			this.timestamp = this.game.time.time;
 		}
@@ -135,15 +136,13 @@ Brick.prototype = {
 
         if(!this.isSliding() ) {
 
-            if(keyPressed === this.key || this.altkey === keyPressed ) {
+            if(keyPressed === this.key ) {
                 this.showCross();
             }
             return;
         }
 
-        //console.log(' ** ', keyPressed, this.key, this.altkey);
-
-        if(keyPressed === this.key || this.altkey === keyPressed ) {
+        if(keyPressed === this.key ) {
 
             //console.log('Match');
 

@@ -19,7 +19,7 @@ GameState.Preloader.prototype = {
 		// this statement sets the blue bar to represent the actual percentage of data loaded
 		this.load.setPreloadSprite(this.preloadBar);
 		// load the images
-		this.images = [ 'bg', 'gameover', 'text', 'stand', 'groundmask', 'bomb', 'kaboom', 'bubble', 'cross', 'title', 'intro', 'setup'];
+		this.images = [ 'bg', 'gameover', 'text', 'stand', 'groundmask', 'bomb', 'kaboom', 'bubble', 'cross', 'title', 'intro', 'setup', 'switch', 'controls'];
 
 		var debug = true;
 		var sounddebug = false;
@@ -61,8 +61,10 @@ GameState.Preloader.prototype = {
 			'losers': 'losers',
 			'hardtime': 'hardtime',
 			'trumptrumptrump': 'trumptrumptrump',
-			'pussy': 'pussy'
-
+			'pussy': 'pussy',
+			'title': 'DefenseLine',
+			'gametheme': 'FutureGladiator',
+			'click': 'click'
 		};
 		
 		var have_mp3 = this.game.device.mp3;
